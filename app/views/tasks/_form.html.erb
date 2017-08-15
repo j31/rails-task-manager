@@ -1,0 +1,13 @@
+<%= form_for(@task) do |t| %>
+
+  <%= t.label :name %>
+  <%= t.text_field :name %>
+<br>
+  <%= t.label :desc %>
+  <%= t.text_field :desc %>
+<br>
+  <%= t.label :priority %>
+  <%= t.text_field :priority %>
+<br>
+  <%= t.submit %>
+<% end %>

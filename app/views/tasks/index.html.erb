@@ -1,0 +1,27 @@
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+
+
+<h2>Task Manager</h2>
+
+<hr>
+
+
+<p>Add new task <%= link_to image_tag("new.jpg", width: 20), new_task_path %></p>
+<br>
+
+<p>CURRENT TASKS:</p>
+
+<ul>
+<% @tasks.each do |t| %>
+  <li>
+    <%= link_to t.name, task_path(t.id) %>
+    <%= link_to image_tag("delete.png", width: 12), task_path(t.id), method: :delete %>
+  </li>
+<% end %>
+</ul>
+
+</div>
+</div>
+</div>
